@@ -62,7 +62,7 @@ end
       LIMIT x
     SQL
 
-    DB[:conn].execute(sql).flatten.take(x)
+    DB[:conn].execute(sql)
   end
 
   def self.first_student_in_grade_10
