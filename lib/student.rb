@@ -66,7 +66,7 @@ end
       LIMIT ?
     SQL
 
-    DB[:conn].execute(sql, number).map do |row|
+    DB[:conn].execute(sql, x).map do |row|
       self.new_from_db(row)
     end
   end
