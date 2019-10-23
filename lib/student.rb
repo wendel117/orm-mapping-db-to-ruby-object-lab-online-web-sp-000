@@ -6,7 +6,7 @@ class Student
     new_student = self.new  # self.new is the same as running Song.new
     new_student.id = row[0]
     new_student.name =  row[1]
-    new_student.length = row[2]
+    new_student.grade = row[2]
     new_student  # return the newly created instance
   end
 
