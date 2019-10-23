@@ -54,7 +54,13 @@ class Student
    DB[:conn].execute(sql)
   end
 
-  def self.first_X_students_in_grade_10
+  def self.first_X_students_in_grade_10(x)
+    sql = <<-SQL
+      SELECT * FROM students
+      WHERE grade = 10
+    SQL
+
+    DB[:conn].execute(sql).flatten.take(x)
   end
 
   def self.first_student_in_grade_10
