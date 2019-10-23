@@ -17,7 +17,7 @@ class Student
       SELECT *
       FROM students
     SQL
- 
+
     DB[:conn].execute(sql)
   end
 
